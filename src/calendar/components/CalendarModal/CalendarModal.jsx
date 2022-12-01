@@ -70,8 +70,10 @@ export const CalendarModal = () => {
     const difference = differenceInSeconds(formValues.end, formValues.start);
 
     if (isNaN(difference) || difference <= 0) {
-      Swal.fire('Fechas incorrectas', 'La fecha de fin debe ser mayor a la fecha de inicio', 'error');
-      return;
+      return Swal.fire(
+        'Fechas incorrectas',
+        'La fecha de fin debe ser mayor a la fecha de inicio',
+        'error');
     }
 
     if (formValues.title.trim().length < 2) {
