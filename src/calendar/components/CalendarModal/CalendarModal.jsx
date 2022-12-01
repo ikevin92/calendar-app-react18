@@ -59,6 +59,7 @@ export const CalendarModal = () => {
     const difference = differenceInSeconds(formValues.end, formValues.start);
 
     if (isNaN(difference) || difference <= 0) {
+      console.log('error en fechas');
       return;
     }
 
